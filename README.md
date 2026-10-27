@@ -11,6 +11,8 @@
 
 两个技能可以配合使用：架构技能侧重系统设计，C++ 技能侧重代码规范。架构技能也支持纯 Blueprint 项目，不要求为了使用技能而新增 C++ 模块。
 
+仓库根目录的 [AGENTS.md](AGENTS.md) 包含技能调用、协作和规范优先级的中文约定，可作为项目的 `AGENTS.md` 使用，也可将内容复制到支持 Custom Instructions 的工具中。使用前请按项目需求调整。
+
 ## 安装
 
 将需要的技能文件夹完整复制到 Aura 项目的技能目录，保留各自的 `SKILL.md` 和 `references/`：
@@ -39,5 +41,7 @@
 技能中的参考资料按任务需要读取。具体规则、适用边界和验证要求请见各技能的 `SKILL.md`。使用前请根据项目现有规范、实际引擎版本和工具能力核实建议；技能不能替代编译、编辑器验证或测试。
 
 ## 参考来源
+
+`ue5-architecture` 的 [C++ 与 Blueprint 的平衡](ue5-architecture/references/balancing-cpp-blueprint.md) 参考了 Epic 的 [Balancing Blueprint and C++（UE 4.27）](https://dev.epicgames.com/documentation/unreal-engine/balancing-blueprint-and-cplusplus?application_version=4.27#architecturenotes) 及其他 UE5 文档，并结合项目约定。
 
 `ue5-epic-cpp-standard` 附带的 `references/Epic_CPP_Coding_Standard.md` 是 Epic Games 的 UE 5.8 文档导出快照，来源为 [Epic C++ Coding Standard](https://dev.epicgames.com/documentation/unreal-engine/epic-cplusplus-coding-standard-for-unreal-engine)。Epic 原文与其权利归原权利人所有；项目约定在技能正文中另有标识。

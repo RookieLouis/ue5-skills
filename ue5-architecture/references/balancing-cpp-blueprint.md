@@ -1,5 +1,7 @@
 # C++ 与 Blueprint 的平衡 / Balancing C++ and Blueprint
 
+参考来源：Epic Games 的 [Balancing Blueprint and C++（UE 4.27，Architecture Notes）](https://dev.epicgames.com/documentation/unreal-engine/balancing-blueprint-and-cplusplus?application_version=4.27#architecturenotes)。本文结合其他 UE5 文档与项目约定整理，并非 Epic 原文；使用时需核实项目的引擎版本。
+
 目标：**C++ 提供稳定行为契约与权威状态，Blueprint 提供内容装配、配置、适当的视觉与演出扩展**。这不是“所有 Blueprint 逻辑都禁止”，而是避免关键 Gameplay 规则分散且无法测试。
 
 这里的“权威”定义见 [SKILL.md](../SKILL.md)：规则与状态的唯一来源，不等同于网络 Authority。
