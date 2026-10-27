@@ -1,4 +1,4 @@
-# UE5 Aura Skills
+# UE5 Skills
 
 两个用于 Unreal Engine 5 项目开发的 AI 技能，分别处理 Gameplay 架构和 UE C++ 编码规范。技能正文以中文为主，保留 Unreal Engine 的英文术语。
 
