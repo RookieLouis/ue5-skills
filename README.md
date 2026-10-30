@@ -6,10 +6,10 @@
 
 | 技能 | 用途 |
 | --- | --- |
-| [ue5-architecture](ue5-architecture/SKILL.md) | 设计、重构或审查 Gameplay 架构，包括类与组件职责、系统通信、数据驱动、C++ 与 Blueprint 分工，以及 Blueprint 向 C++ 迁移。 |
-| [ue5-epic-cpp-standard](ue5-epic-cpp-standard/SKILL.md) | 编写、修改或审查 UE C++ 时，参考 Epic UE 5.8 C++ Coding Standard 检查命名、注释、格式、API 设计等；其中也明确标注了项目约定。 |
+| [ue5-architecture](ue5-architecture/SKILL.md) | 设计、重构或审查 Gameplay 架构及 Content 目录组织，包括类与组件职责、系统通信、数据驱动、C++ 与 Blueprint 分工，以及 Blueprint 向 C++ 迁移。 |
+| [ue5-epic-cpp-standard](ue5-epic-cpp-standard/SKILL.md) | 编写、修改或审查 UE C++ 时，参考 Epic UE 5.8 C++ Coding Standard 检查命名、注释、格式、API 设计等；也提供 Content 资产命名指南，并明确标注项目约定。 |
 
-两个技能可以配合使用：架构技能侧重系统设计，C++ 技能侧重代码规范。架构技能也支持纯 Blueprint 项目，不要求为了使用技能而新增 C++ 模块。
+两个技能可以配合使用：架构技能侧重系统设计和目录组织，C++ 技能侧重代码规范和资产命名。架构技能也支持纯 Blueprint 项目，不要求为了使用技能而新增 C++ 模块。
 
 仓库根目录的 [AGENTS.md](AGENTS.md) 包含技能调用、协作和规范优先级的中文约定，可作为项目的 `AGENTS.md` 使用，也可将内容复制到支持 Custom Instructions 的工具中。使用前请按项目需求调整。
 

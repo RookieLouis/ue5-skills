@@ -1,6 +1,6 @@
 ---
 name: ue5-architecture
-description: 为 Unreal Engine 5 C++/Blueprint 项目设计、重构或审查 Gameplay 架构。当任务涉及新系统规划、多个 Actor/Component/Subsystem 的职责边界、Inventory/Combat/Interaction/Save 等跨系统通信、SOLID/SoC/Loose Coupling、Observer/Mediator、DataAsset/DataTable、Inheritance/Composition、Object Pooling、BP 依赖链与 Hard/Soft Reference、异步加载、Designer Convenience、Blueprint → C++ 迁移或架构 Code Review 时使用。普通语法解释、单点 Bug 修复、简单属性修改、仅添加日志时不要自动使用。
+description: 为 Unreal Engine 5 C++/Blueprint 项目设计、重构或审查 Gameplay 架构及 Content 目录组织。当任务涉及内容目录规划、资产归类、新系统规划、多个 Actor/Component/Subsystem 的职责边界、跨系统通信、数据驱动、继承与组合、资源依赖或 Blueprint → C++ 迁移时使用。普通语法解释、单点 Bug 修复、简单属性修改、仅添加日志时不要自动使用。
 ---
 
 # UE5 Architecture Design & Review
@@ -8,6 +8,8 @@ description: 为 Unreal Engine 5 C++/Blueprint 项目设计、重构或审查 Ga
 目标：构建适合中小型、以 AI 辅助开发为主的 Unreal Engine 游戏架构——职责清楚、依赖可控、易于 Editor/Blueprint 配置、便于演进，且不为了模式本身而增加抽象。使用用户的语言说明，保留 Actor、Component、Projectile、Collision、Delegate、DataAsset、Blueprint 等 UE 技术术语英文。
 
 本 Skill 中的“权威”（Authority）指规则与状态的唯一来源，不等同于网络复制中的 Authority；单机项目不因此需要服务器、RPC 或复制系统。
+
+仅涉及 Content 目录规划或资产归类时，按 [content-directories.md](references/content-directories.md) 执行，不必套用下列 Gameplay 架构设计流程；涉及系统架构时遵循以下流程。
 
 ## 任务处理流程（必须遵循）
 
@@ -44,6 +46,9 @@ description: 为 Unreal Engine 5 C++/Blueprint 项目设计、重构或审查 Ga
 | 架构审核与交付验收                                                                         | [review-checklist.md](references/review-checklist.md)       |
 | 单机撤离游戏 Loot → Inventory → UI 实际示例                                                 | [extraction-example.md](references/extraction-example.md)   |
 | Blueprint → C++ 迁移、Reparent、CoreRedirects、UserDefinedStruct/Enum 替换               | [bp-to-cpp-migration.md](references/bp-to-cpp-migration.md) |
+| Content 目录规划、资产归类、开发目录和迁移风险 | [content-directories.md](references/content-directories.md) |
+
+资产命名与前缀按 `ue5-epic-cpp-standard` 的资产命名指南处理；不因目录规划而自动重命名或移动已有资产。
 
 ## 架构选型默认顺序
 

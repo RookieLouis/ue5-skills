@@ -1,6 +1,6 @@
 ---
 name: ue5-epic-cpp-standard
-description: "编写、修改、重构、Debug、Review 或解释 Unreal Engine C++（.h/.cpp、UCLASS/USTRUCT/UENUM/UINTERFACE、UFUNCTION/UPROPERTY、UE C++ API）时使用：按 Epic UE5.8 C++ Coding Standard 及标注的项目约定检查命名、注释、const、现代 C++ 与 Lambda 捕获、格式、依赖和 API 设计。纯 Blueprint 节点配置、资产/美术调整、与 UE C++ 无关的任务不要自动使用；职责划分、跨系统通信等架构问题使用 ue5-architecture。"
+description: "编写、修改、重构、Debug、Review 或解释 Unreal Engine C++ 时，按 Epic UE5.8 C++ Coding Standard 检查代码规范；规划、命名或审查 UE 资产名称和前缀时，使用资产命名指南。纯 Blueprint 节点配置或美术调整且不涉及资产命名时不要自动使用；Gameplay 架构和 Content 目录组织使用 ue5-architecture。"
 ---
 
 # UE5 Epic C++ Coding Standard
@@ -10,8 +10,9 @@ description: "编写、修改、重构、Debug、Review 或解释 Unreal Engine 
 本 Skill 用于 Unreal Engine C++ 的编写、修改、重构、Debug、Code Review 和代码讲解，以 `references/Epic_CPP_Coding_Standard.md`（Epic UE5.8 C++ Coding Standard 导出副本）为规范依据。不要把一般性编程建议、项目约定或个人习惯冒充 Epic 原文规定。
 
 - **适用**：`.h` / `.cpp`、`UCLASS`、`USTRUCT`、`UENUM`、`UINTERFACE`、`UFUNCTION`、`UPROPERTY`、Unreal C++ API、模块的 C++ 接口与实现。
-- **不单独触发**：纯 Blueprint 节点配置、资产/美术调整、与 UE C++ 无关的任务；这些任务若同时涉及 C++ 代码，仍对 C++ 部分应用本 Skill。
-- **分工**：职责划分、通信方式、数据组织、C++ / Blueprint 分工由 `ue5-architecture` 负责；本 Skill 只管代码层面的规范。
+- **资产命名**：规划、命名或审查 UE Content 资产时，按需读取 [资产命名指南](references/asset-naming-guide.md)；纯资产命名任务不套用下方 C++ 工作流、强度标签或编译检查。资产命名与 C++ 标识符命名是不同规范。
+- **不单独触发**：纯 Blueprint 节点配置或美术调整且不涉及资产命名；若同时涉及 C++ 代码，仍对 C++ 部分应用本 Skill。
+- **分工**：职责划分、通信方式、数据组织、Content 目录和 C++ / Blueprint 分工由 `ue5-architecture` 负责；本 Skill 负责 C++ 规范与资产命名。
 
 ## 规则优先级（与 Custom Instructions 保持一致）
 
@@ -25,6 +26,7 @@ description: "编写、修改、重构、Debug、Review 或解释 Unreal Engine 
 
 ## 规范来源与阅读策略
 
+- 资产命名来源及默认前缀见 [资产命名指南](references/asset-naming-guide.md)；它是独立于 C++ Coding Standard 的推荐，不属于下方 Epic C++ 原文摘要。
 - 完整原文：[`references/Epic_CPP_Coding_Standard.md`](references/Epic_CPP_Coding_Standard.md)，原样副本，不要修改。
 - 默认只读本文件，不要为简单修改把 1,354 行原文全部读入上下文。
 - 遇到争议、例外、复杂代码，或要给出“符合 Epic 标准”的结论时，按下方索引的行号读取对应章节全文，不要只依赖速查摘要。
