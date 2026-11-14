@@ -13,7 +13,7 @@ Two AI skills for Unreal Engine 5 projects: one for Gameplay architecture and on
 
 The skills can work together: the architecture skill focuses on system design and directory organization, while the C++ skill focuses on code conventions and asset naming. The architecture skill also supports Blueprint-only projects and does not require adding a C++ module.
 
-The repository's [AGENTS.md](AGENTS.md) contains Chinese instructions for skill selection, collaboration, and rule priority. You can use it as a project `AGENTS.md` or copy its contents into a tool's Custom Instructions. Adapt it to your project before use.
+The repository's [AGENTS.md](AGENTS.md) contains English instructions for skill selection, collaboration, and rule priority; a [Chinese version](AGENTS.zh-CN.md) is also available. You can use either version as a project `AGENTS.md` or copy its contents into a tool's Custom Instructions. Adapt it to your project before use.
 
 ## Installation
 
