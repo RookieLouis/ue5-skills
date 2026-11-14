@@ -28,6 +28,7 @@ description: "编写、修改、重构、Debug、Review 或解释 Unreal Engine 
 
 - 资产命名来源及默认前缀见 [资产命名指南](references/asset-naming-guide.md)；它是独立于 C++ Coding Standard 的推荐，不属于下方 Epic C++ 原文摘要。
 - 完整原文：[`references/Epic_CPP_Coding_Standard.md`](references/Epic_CPP_Coding_Standard.md)，原样副本，不要修改。
+- 中文参考：[Epic 官方 UE 5.8 中文文档](https://dev.epicgames.com/documentation/zh-cn/unreal-engine/epic-cplusplus-coding-standard-for-unreal-engine?application_version=5.8)。在线中文版未经核实与所附英文快照逐行一致；规则依据和行号仍以本地英文快照为准。
 - 默认只读本文件，不要为简单修改把 1,354 行原文全部读入上下文。
 - 遇到争议、例外、复杂代码，或要给出“符合 Epic 标准”的结论时，按下方索引的行号读取对应章节全文，不要只依赖速查摘要。
 - 原文是 UE5.8 时点的快照；与项目实际 UE 版本、引擎头文件、UHT 或编译器行为冲突时，先核实再说明区别。

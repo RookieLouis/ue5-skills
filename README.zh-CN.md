@@ -2,14 +2,14 @@
 
 [English](README.md) | 中文
 
-两个用于 Unreal Engine 5 项目开发的 AI 技能，分别处理 Gameplay 架构和 UE C++ 编码规范。技能正文以中文为主，保留 Unreal Engine 的英文术语。
+两个用于 Unreal Engine 5 项目开发的 AI 技能，分别处理 Gameplay 架构和 UE C++ 编码规范。技能及项目自编参考资料均提供中英文版本，Unreal Engine 术语参照引用文档。
 
 ## 包含的技能
 
-| 技能 | 用途 |
-| --- | --- |
-| [ue5-architecture](ue5-architecture/SKILL.md) | 设计、重构或审查 Gameplay 架构及 Content 目录组织，包括类与组件职责、系统通信、数据驱动、C++ 与 Blueprint 分工，以及 Blueprint 向 C++ 迁移。 |
-| [ue5-epic-cpp-standard](ue5-epic-cpp-standard/SKILL.md) | 编写、修改或审查 UE C++ 时，参考 Epic UE 5.8 C++ Coding Standard 检查命名、注释、格式、API 设计等；也提供 Content 资产命名指南，并明确标注项目约定。 |
+| 技能 | 版本 | 用途 |
+| --- | --- | --- |
+| ue5-architecture | [中文](ue5-architecture/SKILL.md) · [English](en/ue5-architecture/SKILL.md) | 设计、重构或审查 Gameplay 架构及 Content 目录组织，包括类与组件职责、系统通信、数据驱动、C++ 与 Blueprint 分工，以及 Blueprint 向 C++ 迁移。 |
+| ue5-epic-cpp-standard | [中文](ue5-epic-cpp-standard/SKILL.md) · [English](en/ue5-epic-cpp-standard/SKILL.md) | 编写、修改或审查 UE C++ 时，参考 Epic UE 5.8 C++ Coding Standard 检查命名、注释、格式、API 设计等；也提供 Content 资产命名指南，并明确标注项目约定。 |
 
 两个技能可以配合使用：架构技能侧重系统设计和目录组织，C++ 技能侧重代码规范和资产命名。架构技能也支持纯 Blueprint 项目，不要求为了使用技能而新增 C++ 模块。
 
@@ -17,7 +17,7 @@
 
 ## 安装
 
-将需要的技能文件夹完整复制到 Aura 项目的技能目录，保留各自的 `SKILL.md` 和 `references/`：
+先选择语言：仓库根目录下的技能文件夹为中文版，[`en/`](en/) 下为英文版。将需要的技能文件夹完整复制到 Aura 项目的技能目录，保留各自的 `SKILL.md` 和 `references/`。两个语言版本使用相同的技能名，每个技能只需安装一种语言：
 
 ```text
 <项目目录>/Saved/.Aura/Skills/
@@ -46,4 +46,4 @@
 
 `ue5-architecture` 的 [C++ 与 Blueprint 的平衡](ue5-architecture/references/balancing-cpp-blueprint.md) 参考了 Epic 的 [Balancing Blueprint and C++（UE 4.27）](https://dev.epicgames.com/documentation/unreal-engine/balancing-blueprint-and-cplusplus?application_version=4.27#architecturenotes) 及其他 UE5 文档，并结合项目约定。
 
-`ue5-epic-cpp-standard` 附带的 `references/Epic_CPP_Coding_Standard.md` 是 Epic Games 的 UE 5.8 文档导出快照，来源为 [Epic C++ Coding Standard](https://dev.epicgames.com/documentation/unreal-engine/epic-cplusplus-coding-standard-for-unreal-engine)。Epic 原文与其权利归原权利人所有；项目约定在技能正文中另有标识。
+`ue5-epic-cpp-standard` 附带的 `references/Epic_CPP_Coding_Standard.md` 是 Epic Games 的 UE 5.8 英文文档原样快照，来源为 [Epic C++ Coding Standard](https://dev.epicgames.com/documentation/unreal-engine/epic-cplusplus-coding-standard-for-unreal-engine?application_version=5.8)。中文可查阅 [Epic 官方 UE 5.8 中文文档](https://dev.epicgames.com/documentation/zh-cn/unreal-engine/epic-cplusplus-coding-standard-for-unreal-engine?application_version=5.8)；在线中文版未经核实与所附快照逐行对应。Epic 原文与其权利归原权利人所有；项目约定在技能正文中另有标识。

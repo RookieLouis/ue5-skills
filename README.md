@@ -2,14 +2,14 @@
 
 [中文说明](README.zh-CN.md)
 
-Two AI skills for Unreal Engine 5 projects: one for Gameplay architecture and one for UE C++ coding conventions. The skills themselves are primarily written in Chinese and retain Unreal Engine terminology in English.
+Two AI skills for Unreal Engine 5 projects: one for Gameplay architecture and one for UE C++ coding conventions. The skills and their project-authored reference guides are available in English and Chinese. Unreal Engine terms follow the cited documentation.
 
 ## Skills
 
-| Skill | Purpose |
-| --- | --- |
-| [ue5-architecture](ue5-architecture/SKILL.md) | Design, refactor, or review Gameplay architecture and Content directory organization, including class and component responsibilities, system communication, data-driven design, the C++ / Blueprint split, and Blueprint-to-C++ migration. |
-| [ue5-epic-cpp-standard](ue5-epic-cpp-standard/SKILL.md) | Check UE C++ naming, comments, formatting, API design, and other conventions against Epic's UE 5.8 C++ Coding Standard. It also provides asset naming guidance and identifies project-specific conventions. |
+| Skill | Versions | Purpose |
+| --- | --- | --- |
+| ue5-architecture | [English](en/ue5-architecture/SKILL.md) · [中文](ue5-architecture/SKILL.md) | Design, refactor, or review Gameplay architecture and Content directory organization, including class and component responsibilities, system communication, data-driven design, the C++ / Blueprint split, and Blueprint-to-C++ migration. |
+| ue5-epic-cpp-standard | [English](en/ue5-epic-cpp-standard/SKILL.md) · [中文](ue5-epic-cpp-standard/SKILL.md) | Check UE C++ naming, comments, formatting, API design, and other conventions against Epic's UE 5.8 C++ Coding Standard. It also provides asset naming guidance and identifies project-specific conventions. |
 
 The skills can work together: the architecture skill focuses on system design and directory organization, while the C++ skill focuses on code conventions and asset naming. The architecture skill also supports Blueprint-only projects and does not require adding a C++ module.
 
@@ -17,7 +17,7 @@ The repository's [AGENTS.md](AGENTS.md) contains English instructions for skill 
 
 ## Installation
 
-Copy the complete skill folders you need into your Aura project's skill directory, retaining each `SKILL.md` and `references/` folder:
+Choose one language: use the skill folders under [`en/`](en/) for English, or the skill folders at the repository root for Chinese. Copy the complete folders you need into your Aura project's skill directory, retaining each `SKILL.md` and `references/` folder. Both versions use the same skill names, so install only one language per skill:
 
 ```text
 <project>/Saved/.Aura/Skills/
@@ -46,4 +46,4 @@ Reference files are read as needed. See each `SKILL.md` for its rules, scope, an
 
 The architecture skill's [Balancing C++ and Blueprint](ue5-architecture/references/balancing-cpp-blueprint.md) draws on Epic's [Balancing Blueprint and C++ (UE 4.27)](https://dev.epicgames.com/documentation/unreal-engine/balancing-blueprint-and-cplusplus?application_version=4.27#architecturenotes) and other UE5 documentation, combined with project conventions.
 
-The C++ skill includes `references/Epic_CPP_Coding_Standard.md`, an exported snapshot of Epic Games' UE 5.8 documentation, sourced from the [Epic C++ Coding Standard](https://dev.epicgames.com/documentation/unreal-engine/epic-cplusplus-coding-standard-for-unreal-engine). Epic's original text and its rights belong to their respective owners; project conventions are identified separately in the skill.
+The C++ skill includes `references/Epic_CPP_Coding_Standard.md`, an unchanged English snapshot of Epic Games' UE 5.8 documentation, sourced from the [Epic C++ Coding Standard](https://dev.epicgames.com/documentation/unreal-engine/epic-cplusplus-coding-standard-for-unreal-engine?application_version=5.8). For Chinese, see [Epic's online UE 5.8 Chinese documentation](https://dev.epicgames.com/documentation/zh-cn/unreal-engine/epic-cplusplus-coding-standard-for-unreal-engine?application_version=5.8); the online text is not a verified line-by-line translation of the included snapshot. Epic's original text and its rights belong to their respective owners; project conventions are identified separately in the skill.
