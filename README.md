@@ -1,24 +1,26 @@
 # UE5 Skills
 
-两个用于 Unreal Engine 5 项目开发的 AI 技能，分别处理 Gameplay 架构和 UE C++ 编码规范。技能正文以中文为主，保留 Unreal Engine 的英文术语。
+[中文说明](README.zh-CN.md)
 
-## 包含的技能
+Two AI skills for Unreal Engine 5 projects: one for Gameplay architecture and one for UE C++ coding conventions. The skills themselves are primarily written in Chinese and retain Unreal Engine terminology in English.
 
-| 技能 | 用途 |
+## Skills
+
+| Skill | Purpose |
 | --- | --- |
-| [ue5-architecture](ue5-architecture/SKILL.md) | 设计、重构或审查 Gameplay 架构及 Content 目录组织，包括类与组件职责、系统通信、数据驱动、C++ 与 Blueprint 分工，以及 Blueprint 向 C++ 迁移。 |
-| [ue5-epic-cpp-standard](ue5-epic-cpp-standard/SKILL.md) | 编写、修改或审查 UE C++ 时，参考 Epic UE 5.8 C++ Coding Standard 检查命名、注释、格式、API 设计等；也提供 Content 资产命名指南，并明确标注项目约定。 |
+| [ue5-architecture](ue5-architecture/SKILL.md) | Design, refactor, or review Gameplay architecture and Content directory organization, including class and component responsibilities, system communication, data-driven design, the C++ / Blueprint split, and Blueprint-to-C++ migration. |
+| [ue5-epic-cpp-standard](ue5-epic-cpp-standard/SKILL.md) | Check UE C++ naming, comments, formatting, API design, and other conventions against Epic's UE 5.8 C++ Coding Standard. It also provides asset naming guidance and identifies project-specific conventions. |
 
-两个技能可以配合使用：架构技能侧重系统设计和目录组织，C++ 技能侧重代码规范和资产命名。架构技能也支持纯 Blueprint 项目，不要求为了使用技能而新增 C++ 模块。
+The skills can work together: the architecture skill focuses on system design and directory organization, while the C++ skill focuses on code conventions and asset naming. The architecture skill also supports Blueprint-only projects and does not require adding a C++ module.
 
-仓库根目录的 [AGENTS.md](AGENTS.md) 包含技能调用、协作和规范优先级的中文约定，可作为项目的 `AGENTS.md` 使用，也可将内容复制到支持 Custom Instructions 的工具中。使用前请按项目需求调整。
+The repository's [AGENTS.md](AGENTS.md) contains Chinese instructions for skill selection, collaboration, and rule priority. You can use it as a project `AGENTS.md` or copy its contents into a tool's Custom Instructions. Adapt it to your project before use.
 
-## 安装
+## Installation
 
-将需要的技能文件夹完整复制到 Aura 项目的技能目录，保留各自的 `SKILL.md` 和 `references/`：
+Copy the complete skill folders you need into your Aura project's skill directory, retaining each `SKILL.md` and `references/` folder:
 
 ```text
-<项目目录>/Saved/.Aura/Skills/
+<project>/Saved/.Aura/Skills/
 ├── ue5-architecture/
 │   ├── SKILL.md
 │   └── references/
@@ -27,21 +29,21 @@
     └── references/
 ```
 
-如果技能列表没有更新，请按 Aura 的实际行为重新加载项目或重启 Aura。其他兼容 `SKILL.md` 的工具可能采用不同的安装位置和触发方式，请参照对应工具的文档。
+If the skills do not appear, reload the project or restart Aura as appropriate. Other tools compatible with `SKILL.md` may use different installation locations and invocation methods; consult their documentation.
 
-## 使用
+## Usage
 
-在 Aura 中可以通过 `/ue5-architecture` 或 `/ue5-epic-cpp-standard` 显式调用，也可以在描述相关任务时让支持自动调用的工具根据技能描述选择。建议同时提供项目背景、引擎版本、目标和需要检查的范围。例如：
+In Aura, invoke `/ue5-architecture` or `/ue5-epic-cpp-standard` explicitly, or describe a relevant task and allow tools that support automatic invocation to select a skill. Include project context, engine version, goals, and the scope to inspect. For example:
 
 ```text
-/ue5-architecture 帮我审查背包系统的组件职责与 UI 通信方式。
-/ue5-epic-cpp-standard 审查这个 ActorComponent 的 UE C++ 命名、生命周期与接口。
+/ue5-architecture Review the responsibilities of my inventory components and how they communicate with the UI.
+/ue5-epic-cpp-standard Review this ActorComponent's UE C++ naming, lifetime, and interface.
 ```
 
-技能中的参考资料按任务需要读取。具体规则、适用边界和验证要求请见各技能的 `SKILL.md`。使用前请根据项目现有规范、实际引擎版本和工具能力核实建议；技能不能替代编译、编辑器验证或测试。
+Reference files are read as needed. See each `SKILL.md` for its rules, scope, and verification requirements. Check recommendations against your project's conventions, actual engine version, and available tools. The skills do not replace builds, Editor verification, or testing.
 
-## 参考来源
+## References
 
-`ue5-architecture` 的 [C++ 与 Blueprint 的平衡](ue5-architecture/references/balancing-cpp-blueprint.md) 参考了 Epic 的 [Balancing Blueprint and C++（UE 4.27）](https://dev.epicgames.com/documentation/unreal-engine/balancing-blueprint-and-cplusplus?application_version=4.27#architecturenotes) 及其他 UE5 文档，并结合项目约定。
+The architecture skill's [Balancing C++ and Blueprint](ue5-architecture/references/balancing-cpp-blueprint.md) draws on Epic's [Balancing Blueprint and C++ (UE 4.27)](https://dev.epicgames.com/documentation/unreal-engine/balancing-blueprint-and-cplusplus?application_version=4.27#architecturenotes) and other UE5 documentation, combined with project conventions.
 
-`ue5-epic-cpp-standard` 附带的 `references/Epic_CPP_Coding_Standard.md` 是 Epic Games 的 UE 5.8 文档导出快照，来源为 [Epic C++ Coding Standard](https://dev.epicgames.com/documentation/unreal-engine/epic-cplusplus-coding-standard-for-unreal-engine)。Epic 原文与其权利归原权利人所有；项目约定在技能正文中另有标识。
+The C++ skill includes `references/Epic_CPP_Coding_Standard.md`, an exported snapshot of Epic Games' UE 5.8 documentation, sourced from the [Epic C++ Coding Standard](https://dev.epicgames.com/documentation/unreal-engine/epic-cplusplus-coding-standard-for-unreal-engine). Epic's original text and its rights belong to their respective owners; project conventions are identified separately in the skill.

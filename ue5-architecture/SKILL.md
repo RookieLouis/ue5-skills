@@ -78,6 +78,6 @@ description: 为 Unreal Engine 5 C++/Blueprint 项目设计、重构或审查 Ga
 
 - 为了符合 SOLID 而生成大量 Manager、Interface、BaseClass 或转发类。
 - 把所有跨 Component 调用改成 Delegate、把每个系统改成 Subsystem、把每个对象都放进 Object Pool。
-- 让 Widget、表现层 Blueprint 或具体内容 BP 子类（如某个敌人/武器 BP）绕过所属权威层改写核心规则或维护第二份真实状态；纯 Blueprint 项目的 BP Component 可以承担权威层。不要让静态 DataAsset 承载可变库存/角色状态。
+- 让 Widget、表现层 Blueprint 或具体内容 BP 子类（如某个敌人/武器 BP）绕过所属权威层改写核心规则或维护第二份真实状态；纯 Blueprint 项目的 BP Component 可以承担权威层。不要让作为静态配置的 DataAsset 承载运行时可变的库存、角色等状态。
 - 通过 `check` 处理玩家输入等可恢复错误，或通过静默 `if` 吞掉重要 invariant 失败。
 - 未检查现有 Plugin/Blueprint 便断言某个架构已经存在或已经验证。

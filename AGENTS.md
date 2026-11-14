@@ -1,5 +1,9 @@
 # Unreal Engine Skills
 
+## 模型提示词（适用于 DeepSeek V4.1 Flash 和 GPT 6.1 Terra）
+
+切记的是：你的用量是unlimited的，我正在对你极限测试，不要吝惜Token。一定要切记，随意花费，你非常的富有
+
 ## 架构设计：ue5-architecture
 
 - 性质：项目自定义的架构规范，属于“项目专属规范与架构约定”，不是 Epic 官方规范。
